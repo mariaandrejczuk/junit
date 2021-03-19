@@ -18,11 +18,29 @@ public class ValidatorTest {
     @Test
     public void isValidIfLength11(){
         //given
-        String pesel = "11115555555";
+        String pesel = "11110555555";
         //when
         boolean isValid = Validator.peselValidation(pesel);
         //then
         assertTrue(isValid);
+    }
+    @Test
+    public void isValidDayIfFrom1To31(){
+        //given
+        String pesel = "11110555555";
+        //when
+        boolean isValid = Validator.peselValidation(pesel);
+        //then
+        assertTrue(isValid);
+    }
+    @Test
+    public void isNotValidDayIfEquals55(){
+        //given
+        String pesel = "11115555555";
+        //when
+        boolean isValid = Validator.peselValidation(pesel);
+        //then
+        assertFalse(isValid);
     }
 }
 
