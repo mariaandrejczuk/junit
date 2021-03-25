@@ -53,5 +53,39 @@ public class ArrayCalculationTest {
         //then
         assertNotEquals(1000, min);
     }
+
+    @Test
+    public void maxValueIs6552542() {
+        //given
+        int[] tab = {465465, 101016, 6552542, -500, 255111, 1000};
+
+        //when
+        int max = ArrayCalculation.max(tab);
+
+        //then
+        assertEquals(6552542, max);
+    }
+    @Test
+    public void maxValueIs66() {
+        //given
+        int[] tab = {4, 6, 1, 2, 66};
+
+        //when
+        int max = ArrayCalculation.max(tab);
+
+        //then
+        assertEquals(66, max);
+    }
+    @Test
+    public void maxValueIsNot1000() {
+        //given
+        int[] tab = {465465, 101016, 6552542, -500, 255111, 1000};
+
+        //when
+        int max = ArrayCalculation.max(tab);
+
+        //then
+        assertNotEquals(1000, max);
+    }
 }
 
