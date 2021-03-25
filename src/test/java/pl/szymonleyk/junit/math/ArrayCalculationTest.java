@@ -131,7 +131,7 @@ public class ArrayCalculationTest {
         int[] tab = {4, 2, 1};
 
         //when
-        int median = ArrayCalculation.median(tab);
+        double median = ArrayCalculation.median(tab);
 
         //then
         assertEquals(2, median);
@@ -142,10 +142,21 @@ public class ArrayCalculationTest {
         int[] tab = {5, 1, 2, 5};
 
         //when
-        int median = ArrayCalculation.median(tab);
+        double median = ArrayCalculation.median(tab);
 
         //then
         assertEquals(3.5, median);
+    }
+    @Test
+    public void medianIs77() {
+        //given
+        int[] tab = {100, 1, 92, 77, 4};
+
+        //when
+        double median = ArrayCalculation.median(tab);
+
+        //then
+        assertEquals(77, median);
     }
 }
 
