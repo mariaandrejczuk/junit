@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ExamplesTest {
-    @ParameterizedTest
+    @ParameterizedTest(name = "Person with age {0} is not adult.")
     @ValueSource(ints = {11, 2, 15, 5})
     // given
     public void isNotAdult(int age){
