@@ -3,6 +3,7 @@ package pl.szymonleyk.junit.examples;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ExamplesTest {
@@ -13,6 +14,6 @@ public class ExamplesTest {
     // when
     boolean isAAdult = Examples.isAdult(age);
     // then
-    assertTrue(isAAdult);
+    assertFalse(isAAdult);
     }
 }
