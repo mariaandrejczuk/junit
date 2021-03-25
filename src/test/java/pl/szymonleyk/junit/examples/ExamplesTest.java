@@ -18,7 +18,7 @@ public class ExamplesTest {
     }
 
     @ParameterizedTest(name = "Person with age {0} is adult.")
-    @ValueSource(ints = {19, 22, 25, 66})
+    @ValueSource(ints = {18, 22, 25, 66})
     // given
     public void isAdult(int age){
         // when
