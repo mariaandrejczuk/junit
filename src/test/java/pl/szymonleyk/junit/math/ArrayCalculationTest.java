@@ -125,5 +125,27 @@ public class ArrayCalculationTest {
         //then
         assertNotEquals(3, avg);
     }
+    @Test
+    public void medianOf421Is2() {
+        //given
+        int[] tab = {4, 2, 1};
+
+        //when
+        int median = ArrayCalculation.median(tab);
+
+        //then
+        assertEquals(2, median);
+    }
+    @Test
+    public void medianOf5125Is3coma5() {
+        //given
+        int[] tab = {5, 1, 2, 5};
+
+        //when
+        int median = ArrayCalculation.median(tab);
+
+        //then
+        assertEquals(3.5, median);
+    }
 }
 
