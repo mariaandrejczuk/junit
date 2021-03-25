@@ -16,4 +16,14 @@ public class ExamplesTest {
     // then
     assertFalse(isAAdult);
     }
+
+    @ParameterizedTest(name = "Person with age {0} is adult.")
+    @ValueSource(ints = {19, 22, 25, 66})
+    // given
+    public void isAdult(int age){
+        // when
+        boolean isAAdult = Examples.isAdult(age);
+        // then
+        assertTrue(isAAdult);
+    }
 }
