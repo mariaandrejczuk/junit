@@ -65,6 +65,7 @@ public class ArrayCalculationTest {
         //then
         assertEquals(6552542, max);
     }
+
     @Test
     public void maxValueIs66() {
         //given
@@ -76,6 +77,7 @@ public class ArrayCalculationTest {
         //then
         assertEquals(66, max);
     }
+
     @Test
     public void maxValueIsNot1000() {
         //given
@@ -86,6 +88,42 @@ public class ArrayCalculationTest {
 
         //then
         assertNotEquals(1000, max);
+    }
+
+    @Test
+    public void avgOf111111() {
+        //given
+        int[] tab = {1, 1, 1, 1, 1, 1};
+
+        //when
+        int avg = ArrayCalculation.avg(tab);
+
+        //then
+        assertEquals(1, avg);
+    }
+
+    @Test
+    public void avgOf24And42Is33() {
+        //given
+        int[] tab = {24, 42};
+
+        //when
+        int avg = ArrayCalculation.avg(tab);
+
+        //then
+        assertEquals(33, avg);
+    }
+
+    @Test
+    public void avgOf24And42IsNot3() {
+        //given
+        int[] tab = {24, 42};
+
+        //when
+        int avg = ArrayCalculation.avg(tab);
+
+        //then
+        assertNotEquals(3, avg);
     }
 }
 
