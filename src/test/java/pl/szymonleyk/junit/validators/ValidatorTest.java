@@ -1,4 +1,4 @@
-package pl.szymonleyk.junit;
+package pl.szymonleyk.junit.validators;
 
 import org.junit.jupiter.api.Test;
 
