@@ -12,13 +12,25 @@ public final class ArrayCalculation {
         return min;
     }
 
-    public static int max(int[] tab) {
-        int max = tab[0];
-        for (int value : tab) {
+    public static int max(int[] values) {
+        int max = values[0];
+        for (int value : values) {
             if (value > max) {
                 max = value;
             }
         }
         return max;
     }
+    public static int avg(int[] values) {
+    return sum(values)/values.length;
+    }
+
+    private static int sum(int[] values) {
+        int sum = 0;
+        for (int value : values){
+            sum+=value;
+            }
+        return sum;
+    }
 }
+
