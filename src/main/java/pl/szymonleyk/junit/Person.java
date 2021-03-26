@@ -8,4 +8,8 @@ public class Person {
         this.name = name;
         this.pesel = pesel;
     }
+
+    public String getNameFromPesel() {
+        return pesel.substring(0, 2);
+    }
 }

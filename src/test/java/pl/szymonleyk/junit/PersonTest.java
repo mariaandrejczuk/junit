@@ -3,8 +3,7 @@ package pl.szymonleyk.junit;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PersonTest {
     @ParameterizedTest
@@ -15,6 +14,6 @@ public class PersonTest {
         //when
         String yearResult = person.getNameFromPesel();
         //then
-        assertTrue(year, yearResult);
+        assertEquals(year, yearResult);
     }
 }
