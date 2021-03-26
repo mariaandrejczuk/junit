@@ -1,10 +1,10 @@
 package pl.szymonleyk.junit.examples;
 
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ExamplesTest {
     @ParameterizedTest(name = "Person with age {0} is not adult.")
@@ -25,5 +25,14 @@ public class ExamplesTest {
         boolean isAAdult = Examples.isAdult(age);
         // then
         assertTrue(isAAdult);
+    }
+
+    @ParameterizedTest(name = "{0} + {1} = {2}")
+    @CsvSource({"55,5,60", "8,10,18", "-10,10,0"})
+    public void isCorrectSum(int a, int b, int expectedResult){
+        //when
+        int result = Examples.sum(a,b);
+        //then
+        assertEquals(expectedResult, result);
     }
 }
