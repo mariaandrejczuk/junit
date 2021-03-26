@@ -10,6 +10,6 @@ public class Person {
     }
 
     public String getNameFromPesel() {
-        return pesel.substring(0, 2);
+        return "19"+pesel.substring(0, 2);  // zmodyfikuj metodę tak, aby działała również dla osób urodzonych w latach 2000+
     }
 }

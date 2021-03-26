@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PersonTest {
     @ParameterizedTest
-    @CsvSource({"Jurek, 99011202235, 99", "Kasia, 88021114156, 88"})
+    @CsvSource({"Jurek, 99012101122, 1999", "Kasia, 880211014456, 1988", "Marek, 15211202235, 2015", "Julia, 02221114156, 2002"})
     public void isCorrectYear(String name, String pesel, String year){
         //given
         Person person = new Person(name, pesel);
@@ -17,7 +17,7 @@ public class PersonTest {
         assertEquals(year, yearResult);
     }
     @ParameterizedTest
-    @CsvSource({"Marian, 12011202235, 82", "Maria, 41021114156, 92"})
+    @CsvSource({"Marian, 12011202235, 1982", "Maria, 41021114156, 1992"})
     public void isIncorrectYear(String name, String pesel, String year){
         //given
         Person person = new Person(name, pesel);
