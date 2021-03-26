@@ -1,5 +1,6 @@
 package pl.szymonleyk.junit.examples;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -37,7 +38,7 @@ public class ExamplesTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
+    @RepeatedTest(100)
     public void isFrom5To100(){
         //when
         int number = Examples.randFrom5To100();
