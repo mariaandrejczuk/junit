@@ -1,5 +1,6 @@
 package pl.szymonleyk.junit.examples;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -34,5 +35,13 @@ public class ExamplesTest {
         int result = Examples.sum(a,b);
         //then
         assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void isFrom5To100(){
+        //when
+        int number = Examples.randFrom5To100();
+        //then
+        assertTrue(number >= 5 && number <= 100);
     }
 }
